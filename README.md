@@ -13,3 +13,8 @@ Use the zod library to declare the schema of the messages and use the parse meth
 
 ## Demo
 Refer to the file [`src/index.ts`](src/index.ts) for the demo.
+
+### UPDATE: Valibot
+One downside of zod is that it [does not support tree-shaking](https://github.com/colinhacks/zod/issues/2596). An alternative to zod is [valibot](https://valibot.dev/). Anecdotally, [this article](https://mwskwong.com/blog/migrating-from-zod-to-valibot-a-comparative-experience#bundle-size-is-as-small-as-advertised) shows an example where the bundle size was reduced from `12.37kb` gzipped to `1.72kb` gzipped.
+
+The libraries expose a similar API, and a demo can be found in [`src/index.valibot.ts`](src/index.valibot.ts).
